@@ -5,7 +5,7 @@ transition(name="modal")
 			.modal-container(:style="styleObject")
 				.modal-header
 					.modal-header-bg
-						slot(name="bg")
+						slot(name="head-bg")
 					.modal-header-title
 						span
 							slot(name="header")
@@ -21,8 +21,8 @@ transition(name="modal")
 						.btn-bottom(flex="main:center cross=center")
 							span
 								| &nbsp;
-					.btn(flex-box="1" flex="dir:top main:center cross=center" @click="$emit('close')")
-						.btn-top-1(flex="main:center cross=center")
+					.btn(flex-box="1" flex="dir:top main:center cross=center")
+						.btn-top-1(flex="main:center cross=center" @click="$emit('close')")
 							span
 								| 返回
 						.btn-bottom-1(flex="main:center cross=center")

@@ -4,6 +4,7 @@
   height 50px
   margin 10px
   width 50%
+  font-size fontSize
   .btn-top
     background-color topBg
     border-radius 8px
@@ -13,11 +14,11 @@
       background-color topBg * 1.2
     span
       line-height 40px
-      color topBgActive
+      color fontColor
       width 100%
       text-align center
       &:active
-        color topBgActive * 1.5
+        color fontColor * 1.5
 
   .btn-bottom
     position absolute
@@ -36,11 +37,11 @@
       background-color topBg1 * 1.2
     span
       line-height 40px
-      color topBgActive1
+      color fontColor1
       width 100%
       text-align center
       &:active
-        color topBgActive1 * 1.5
+        color fontColor1 * 1.5
   .btn-bottom-1
     position absolute
     width 100%
