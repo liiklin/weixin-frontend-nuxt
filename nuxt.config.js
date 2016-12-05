@@ -3,6 +3,18 @@ const {
 } = require('path')
 
 module.exports = {
+    router: {
+        routes: [{
+            path: '/',
+            component: 'pages/index'
+        }, {
+            path: '/index',
+            component: 'pages/index'
+        }, {
+            path: '/exam',
+            component: 'pages/exam'
+        }]
+    },
     head: {
         title: 'ip大考堂',
         meta: [{
