@@ -28,24 +28,94 @@ fontSize = 14px
   vertical-align middle
 
 .modal-container
-  position relative
   margin 5%
-  background-color #fff
   border-radius 5px
   height 65%
-  box-shadow 0 2px 8px rgba(0, 0, 0, .33)
   transition all .5s ease
+  z-index 0
 
 .modal-header
+  position relative
   width 100%
-  background #2257a2
-  background linear-gradient(#71b6f0 0%,#2257a2 100%)
+  background #72b7f0
   color #fff
   font-size 1em
+  background linear-gradient(#72b7f0 0%,#2257a2 100%)
   > .modal-header-bottom
     background url('~static/img/bl.svg')
-    height 8px
+    height 10px
     width 100%
+
+.header-bg-top
+  position fixed
+  height 80px
+  width 80px
+  border-radius 100px
+  text-align center
+  top 14%
+  border solid 5px transparent
+  z-index 1
+  img
+    width 100%
+    height 100%
+
+.modal-header-center
+  position relative
+  width 100%
+  margin-bottom 10%
+  font-size 12px
+  color #ffffff
+  &-score
+    position absolute
+    left 15%
+    text-align center
+    width auto
+    height auto
+    &-cricle
+      border solid 4px #00f6ff
+      border-radius 50%
+      height 60px
+      width 60px
+      color #ffffff
+      text-align center
+      &-top
+        font-size 1.5em
+      &-center
+        background #017da6
+        height 1px
+        width 70%
+        margin-bottom 5px
+      &-bottom
+        font-size 0.625em
+  &-answer
+    position absolute
+    right -5%
+    width auto
+    max-width 70%
+    text-align center
+    &-bg
+      img
+        width 70%
+    &-info
+      color #fff
+      font-size 1em
+      &-totle
+        color #6699ff
+      &-right
+        color #25d848
+      &-wrong
+        color #ff4d4d
+
+.header-bg-bottom
+  position fixed
+  background #72b7f0
+  height 80px
+  width 80px
+  border-radius 100px
+  text-align center
+  top 14%
+  border solid 5px #72b7f0
+  z-index -1
 
 .modal-body
   width 90%
