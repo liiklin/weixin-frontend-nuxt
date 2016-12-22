@@ -1,36 +1,38 @@
 <template lang="pug">
 div
-  .list(v-for="data in listDatas")
-    span
-      | {{data.title}}
-    i(class="iconfont icon-xuanze")
+	.list(v-for="data in listDatas" @click="chosePaper(data.id)" v-bind:class="{'active-list':data.id == selectPaper}")
+		span
+			| {{data.title}}
+		i(class="iconfont icon-xuanze")
 </template>
 
 <script>
+import propsync from '../mixins/propsync' //引入mixin文件
+
 export default {
     name: "list",
+    mixins: [propsync],//声明使用propsync的mixin
+    props: {
+        "list": {
+            type: [Array],
+            propsync: false
+        },
+        "paperId": {
+            type: [String, Number]
+        }
+    },
     data() {
         return {
-          listDatas:[{
-            id:1,
-            title:"科目标题1"
-          },
-          {
-            id:2,
-            title:"科目标题2"
-          },
-          {
-            id:3,
-            title:"科目标题3"
-          },
-          {
-            id:4,
-            title:"科目标题4"
-          },
-          {
-            id:5,
-            title:"科目标题5"
-          }]
+            listDatas: this.list,
+            selectPaper: null
+        }
+    },
+    methods: {
+        chosePaper(id) {
+            if (id != this.selectPaper) {
+                this.selectPaper = id
+                this.p_paperId = id
+            }
         }
     }
 }

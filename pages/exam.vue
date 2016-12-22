@@ -65,16 +65,10 @@
 				.btn-top(flex="main:center cross=center")
 					span
 						| 下一题
-				.btn-bottom(flex="main:center cross=center")
-					span
-						| &nbsp;
 			.btn(flex-box="1" flex="dir:top main:center cross=center")
 				.btn-top-1(flex="main:center cross=center")
 					span
 						| 跳过
-				.btn-bottom-1(flex="main:center cross=center")
-					span
-						| &nbsp;
 	.chance
 		span
 			| 还有三次跳过机会
@@ -90,7 +84,7 @@ export default {
     },
     data() {
         return {
-            finishedExam: true,
+            finishedExam: false,
         }
     }
 }

@@ -3,17 +3,24 @@ const {
 } = require('path')
 
 module.exports = {
-    router: {
-        routes: [{
-            path: '/',
-            component: 'pages/index'
-        }, {
-            path: '/index',
-            component: 'pages/index'
-        }, {
-            path: '/exam',
-            component: 'pages/exam'
-        }]
+    // router: {
+    //     routes: [{
+    //         path: '/',
+    //         name: 'home',
+    //         component: 'pages/index'
+    //     }, {
+    //         path: '/index',
+    //         name: 'index',
+    //         component: 'pages/index'
+    //     }, {
+    //         path: '/exam',
+    //         name: 'exam',
+    //         component: 'pages/exam'
+    //     }]
+    // },
+    plugins: ['plugins/vuex-router-sync', 'plugins/filters'],
+    build: {
+      vendor: ['vuex-router-sync']
     },
     head: {
         title: 'ip大考堂',
@@ -36,5 +43,6 @@ module.exports = {
         'flex.css/dist/flex.css',
         'normalize.css/normalize.css',
         '~static/css/iconfont/iconfont.css'
-    ]
+    ],
+    loading: false
 }

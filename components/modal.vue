@@ -14,20 +14,14 @@ transition(name="modal")
 					slot(name="body")
 						| &nbsp;
 				.modal-footer(flex="main:center cross:center")
-					.btn(flex-box="1" flex="dir:top main:center cross=center")
+					.btn(flex-box="1" flex="dir:top main:center cross=center" @click="handleClick")
 						.btn-top(flex="main:center cross=center")
 							span
 								| 开始考试
-						.btn-bottom(flex="main:center cross=center")
-							span
-								| &nbsp;
 					.btn(flex-box="1" flex="dir:top main:center cross=center")
 						.btn-top-1(flex="main:center cross=center" @click="$emit('close')")
 							span
 								| 返回
-						.btn-bottom-1(flex="main:center cross=center")
-							span
-								| &nbsp;
 </template>
 
 <script>
@@ -45,7 +39,12 @@ export default {
                 "border-color": this.color
             }
         }
-    }
+    },
+		methods:{
+			handleClick(evt){
+				this.$emit('click', evt)
+			}
+		}
 }
 </script>
 
